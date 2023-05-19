@@ -13,6 +13,7 @@ const Aselector=()=>{
     return (
         <React.Fragment>
             <Mdialog show={show} StateName={STName} closeModal={handleClose} />
+            {/* <h1>India</h1> */}
                 <IndiaM setTooltipContent={setContent} setStateName={setSTName} setShowDistrict={setShow} />
                 <Tooltip>{content}</Tooltip>
         </React.Fragment>
