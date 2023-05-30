@@ -4,7 +4,8 @@ import India from './topojsons/india.json';
 
 const IndiaM = ({ setTooltipContent, setStateName, setShowDistrict }) => {
   return (
-    <><div className="parent">
+    <>
+    <div className="parent">
       <ComposableMap className="map" data-tip="" projection="geoMercator" 
       width={600} height={283} 
       projectionConfig={{ scale: 420 }}>
@@ -67,8 +68,9 @@ const IndiaM = ({ setTooltipContent, setStateName, setShowDistrict }) => {
       </div>
       <div className="info1">
         <h3>BHARAT</h3>
-        <p>secular country</p>
-        <p>Total Languages : 398</p>
+        <h2>32, 87, 263 sq.km</h2>
+        {/* <p>secular country</p>
+        <p>Total Languages : 398</p> */}
         {/* <li>
           <ul>Area: 3,287,263 sq. km</ul>
           <ul>Coastline Length: 7,516 km</ul>

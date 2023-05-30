@@ -38,6 +38,7 @@ import tripura from './topojsons/states/tripura.json';
 import uttarakhand from './topojsons/states/uttarakhand.json';
 import uttarpradesh from './topojsons/states/uttarpradesh.json';
 import westbengal from './topojsons/states/westbengal.json';
+import './dialog.css';
 
 const StateMap = ({ setTooltipContent, setDistrictName, selectedState }) => {
     let geoURL;
@@ -51,27 +52,27 @@ const StateMap = ({ setTooltipContent, setDistrictName, selectedState }) => {
     } else if (selectedState === 'Andhra Pradesh') {
         geoURL = andhrapradesh;
         scaleMap = 800;
-        centerMap = [80,17];
+        centerMap = [86,16.5];
     } else if (selectedState === 'Arunachal Pradesh') {
         geoURL = arunachalpradesh;
         scaleMap = 1200;
-        centerMap = [94.5,28];
+        centerMap = [98,28];
     } else if (selectedState === 'Assam') {
         geoURL = assam;
-        scaleMap = 1350;
-        centerMap = [92.9,26];
+        scaleMap = 1300;
+        centerMap = [96.25,26];
     } else if (selectedState === 'Bihar') {
         geoURL = bihar;
         scaleMap = 1300;
-        centerMap = [85.5,26];
+        centerMap = [89.5,26];
     } else if (selectedState === 'Chhattisgarh') {
         geoURL = chhattisgarh;
-        scaleMap = 1100;
-        centerMap = [82,21];
+        scaleMap = 900;
+        centerMap = [87.5,21.5];
     } else if (selectedState === 'NCT of Delhi') {
         geoURL = delhi;
         scaleMap = 11000;
-        centerMap = [77.05,28.6];
+        centerMap = [77.5,28.7];
     } else if (selectedState === 'Goa') {
         geoURL = goa;
         scaleMap = 6000;
@@ -79,31 +80,31 @@ const StateMap = ({ setTooltipContent, setDistrictName, selectedState }) => {
     } else if (selectedState === 'Gujarat') {
         geoURL = gujarat;
         scaleMap = 1000;
-        centerMap = [71.5,22];
+        centerMap = [76.5,22.8];
     } else if (selectedState === 'Haryana') {
         geoURL = haryana;
         scaleMap = 1700;
-        centerMap = [76,29];
+        centerMap = [79,29.4];
     } else if (selectedState === 'Himachal Pradesh') {
         geoURL = himachalpradesh;
-        scaleMap = 2000;
-        centerMap = [77.4,31.8];
+        scaleMap = 1800;
+        centerMap = [79.5,32.2];
     } else if (selectedState === 'Jammu & Kashmir') {
         geoURL = jammukashmir;
         scaleMap = 1000;
-        centerMap = [76.3,35];
+        centerMap = [80.8,35.2];
     } else if (selectedState === 'Jharkhand') {
         geoURL = jharkhand;
         scaleMap = 1700;
-        centerMap = [85.7,23.6];
+        centerMap = [88.5,23.6];
     } else if (selectedState === 'Karnataka') {
         geoURL = karnataka;
-        scaleMap = 1100;
-        centerMap = [76.5,15];
+        scaleMap = 850;
+        centerMap = [82.5,15.8];
     } else if (selectedState === 'Kerala') {
         geoURL = kerala;
-        scaleMap = 1800;
-        centerMap = [76,10.5];
+        scaleMap = 1200;
+        centerMap = [81,11];
     } else if (selectedState === 'Lakshadweep') {
         geoURL = lakshadweep;
         scaleMap = 2300;
@@ -111,79 +112,94 @@ const StateMap = ({ setTooltipContent, setDistrictName, selectedState }) => {
     } else if (selectedState === 'Madhya Pradesh') {
         geoURL = madhyapradesh;
         scaleMap = 900;
-        centerMap = [78.5,24];
+        centerMap = [83.5,24.4];
     } else if (selectedState === 'Maharashtra') {
         geoURL = maharashtra;
-        scaleMap = 1000;
-        centerMap = [76.8,19.3];
+        scaleMap = 900;
+        centerMap = [82,19.5];
     } else if (selectedState === 'Manipur') {
         geoURL = manipur;
-        scaleMap = 3400;
-        centerMap = [93.8,24.7];
+        scaleMap = 3000;
+        centerMap = [95.5,24.85];
     } else if (selectedState === 'Meghalaya') {
         geoURL = meghalaya;
         scaleMap = 2500;
-        centerMap = [91.3,25.4];
+        centerMap = [93,25.7];
     } else if (selectedState === 'Mizoram') {
         geoURL = mizoram;
-        scaleMap = 2900;
-        centerMap = [92.8,23.25];
+        scaleMap = 2200;
+        centerMap = [95.41,23.5];
     } else if (selectedState === 'Nagaland') {
         geoURL = nagaland;
-        scaleMap = 4000;
-        centerMap = [94.3,26.1];
+        scaleMap = 3500;
+        centerMap = [95.57,26.1];
     } else if (selectedState === 'Odisha') {
         geoURL = odisha;
-        scaleMap = 1300;
-        centerMap = [84.4,20.25];
+        scaleMap = 1200;
+        centerMap = [88,20.5];
     } else if (selectedState === 'Punjab') {
         geoURL = punjab;
-        scaleMap = 2300;
-        centerMap = [75.35,31.1];
+        scaleMap = 1800;
+        centerMap = [78.2,31.3];
     } else if (selectedState === 'Rajasthan') {
         geoURL = rajasthan;
-        scaleMap = 900;
-        centerMap = [74,26.3];
+        scaleMap = 760;
+        centerMap = [80,27.5];
     } else if (selectedState === 'Sikkim') {
         geoURL = sikkim;
-        scaleMap = 6000;
-        centerMap = [88.45,27.6];
+        scaleMap = 5000;
+        centerMap = [89.5,27.68];
     } else if (selectedState === 'Tamil Nadu') {
         geoURL = tamilnadu;
-        scaleMap = 1300;
-        centerMap = [78.25,10.8];
+        scaleMap = 1000;
+        centerMap = [83.5,11.5];
     } else if (selectedState === 'Telangana') {
         geoURL = telangana;
-        scaleMap = 1200;
-        centerMap = [78,17.9];
+        scaleMap = 1100;
+        centerMap = [83.7,18.3];
+
     } else if (selectedState === 'Tripura') {
         geoURL = tripura;
-        scaleMap = 4500;
-        centerMap = [91.75,23.75];
+        scaleMap = 4000;
+        centerMap = [93.1,23.81];
     } else if (selectedState === 'Uttarakhand') {
         geoURL = uttarakhand;
-        scaleMap = 2000;
-        centerMap = [79.3,30];
+        scaleMap = 1900;
+        centerMap = [81.7,30.4];
     } else if (selectedState === 'Uttar Pradesh') {
         geoURL = uttarpradesh;
-        scaleMap = 1000;
-        centerMap = [80.8,27];
+        scaleMap = 900;
+        centerMap = [86.2,27.4];
     } else if (selectedState === 'West Bengal') {
         geoURL = westbengal;
-        scaleMap = 1200;
-        centerMap = [87.7,24.2];
+        scaleMap = 950;
+        centerMap = [93,24.78];
     }
 
     return (
       <>
-        <ComposableMap  data-tip="" projection="geoMercator" width={150} height={150} projectionConfig={{ scale: scaleMap }}>
+      {/* <div className="map"> */}
+
+        <ComposableMap className="state" data-tip="" projection="geoMercator" width={150} height={150} projectionConfig={{ scale: scaleMap }}>
           <ZoomableGroup zoom={zoomMap} center={centerMap}>
+            <h1>$(ST_NM)</h1>
+            <h1> StateName</h1>
             <Geographies geography={geoURL}>
               {({ geographies }) =>
                 geographies.map(geo => (
                   <Geography  
                     key={geo.rsmKey}
                     geography={geo}
+                    style={{
+                        default: {
+                          fill: "#2c3e50",
+                          outline: "none"
+                        },
+                        hover: {
+                          fill: "#b8bfc4",
+                          outline: "none"
+                        }
+                      }}
                     onMouseEnter={() => {
                       const { district } = geo.properties;
                       setTooltipContent(`${district}`);
@@ -194,14 +210,20 @@ const StateMap = ({ setTooltipContent, setDistrictName, selectedState }) => {
                     onClick = {() => {
                       const { district } = geo.properties;
                       setDistrictName(`${district}`);
+                    //   console.log(`${district}`);
                     }}
   
                   />
                 ))
               }
+              {/* <container>
+                <h1>ABCDEFGHIJKL</h1>
+              </container> */}
             </Geographies>
           </ZoomableGroup>
         </ComposableMap>
+      {/* </div> */}
+
       </>
     );
 };
